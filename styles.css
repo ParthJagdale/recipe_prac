@@ -9,7 +9,7 @@
 
 .container{
     width: 100wh;
-    height: 100vh;
+    height: 100wh;
     background-color: #8EC5FC;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 
@@ -51,8 +51,10 @@ nav{
 }
 #logo{
     
+    font-family: Roboto, Arial, sans-serif;
+
     font-size: 3rem;
-    color: blue;
+    color: rgb(229, 229, 240);
 }
 
 a{
@@ -85,11 +87,15 @@ a{
 .contentbox{
     width: 70%;
     margin: auto;
-  
-    border: black solid 1px;
-    display: flex;
+    height: 100%;
+    background-color: aliceblue;
+
+    display: flex;  
     gap: 100px;
     flex-direction: column;
+    padding: 3rem;
+
+    box-shadow: 3px 3px 30px black;
 }
 .itemcontent{
     display: flex;
@@ -103,7 +109,66 @@ a{
 
 .itemimage{
     img{
-        height: 400px;
+      
+        height: 300px;
         border-radius: 22px;
+        margin-top: 20px;
+        transition: all 0.6s linear 0s;
     }
+}
+
+.itemimage:hover
+{
+    transform: scale(1.1);
+}
+
+.itemtext
+{
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+}
+.itemtext h2{
+    font-size: 2rem;
+}
+
+.ingredientbox{
+    font-size: 1.3rem;
+}
+.recipebox{
+    font-size: 1.1rem;
+}
+
+.itemimage 
+{
+    img{
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: gray;
+        }
+
+    }
+}
+
+.item{
+
+    h2{
+        padding: 12px;
+
+    }
+    h3{
+        padding: 12px;
+    }
+    display: flex;
+    flex-direction: row;
+   
+    .itemcontent {
+        align-content: space-around;
+
+    }
+
 }
